@@ -37,3 +37,9 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- bash: 
+    snyk monitor --all-projects --org=snyk-apps
+  displayName: 'testsnyk'
+
+    
